@@ -1,89 +1,125 @@
-import { Button } from "@/components/ui/button";
-// import {
-//     GitHub,
-//     Linkedin,
-//     Code2,
-// } from "lucide-react";
+import { Button } from "./ui/button";
 
 export default function Hero() {
     return (
-        <section className="min-h-screen flex items-center">
-            <div className="relative max-w-4xl">
+        <section
+            id="home"
+            className="min-h-screen flex items-center"
+        >
+            <div className="max-w-5xl">
 
-                <span className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
+                {/* Status */}
+                <div
+                    className="
+                    inline-flex
+                    items-center
+                    gap-2
+                    rounded-full
+                    border
+                    border-emerald-500/20
+                    bg-emerald-500/5
+                    px-4
+                    py-2
+                    text-xs
+                    text-muted-foreground
+                    "
+                >
                     <span className="relative flex h-2 w-2">
-                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75"></span>
-                        <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
+                        <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
                     </span>
 
-                    Available for work
-                </span>
+                    Available for opportunities
+                </div>
 
+                {/* Name */}
                 <h1
                     className="
-  mt-8
-  text-5xl
-sm:text-6xl
-md:text-7xl
-  font-semibold
-  tracking-[-0.06em]
-  leading-[0.92]
-  "
+                    mt-8
+                    text-5xl
+                    sm:text-6xl
+                    md:text-7xl
+                    lg:text-8xl
+                    font-semibold
+                    tracking-[-0.08em]
+                    leading-[0.9]
+                    "
                 >
-                    <span className="text-foreground">
-                        Veerender
-                    </span>{" "}
+                    Veerender{" "}
 
                     <span
                         className="
-        bg-linear-to-r
-        from-foreground
-        via-foreground
-        to-emerald-400
-        bg-clip-text
-        text-transparent
-        "
+                        bg-gradient-to-r
+                        from-foreground
+                        via-foreground
+                        to-emerald-400
+                        bg-clip-text
+                        text-transparent
+                        "
                     >
                         Nemali
                     </span>
                 </h1>
 
-                <h2 className="mt-5 text-lg font-medium uppercase tracking-[0.15em] text-muted-foreground">
-                    Full Stack Software Developer
-                </h2>
-
-                <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-                    Building scalable full-stack applications with React,
-                    Next.js, Node.js, and MongoDB, focused on performance,
-                    usability, and clean architecture.
+                {/* Role */}
+                <p
+                    className="
+                    mt-6
+                    text-xl
+                    md:text-2xl
+                    text-muted-foreground
+                    "
+                >
+                    Software Engineer
                 </p>
 
-                <div className="mt-8 flex flex-wrap gap-2">
+                {/* Main Value */}
+                <p
+                    className="
+                    mt-8
+                    max-w-3xl
+                    text-lg
+                    md:text-xl
+                    leading-relaxed
+                    text-muted-foreground
+                    "
+                >
+                    I build scalable web applications and enjoy solving
+                    complex engineering problems. Experienced across
+                    frontend and backend development, with a strong focus on
+                    performance, clean architecture, and user experience.
+                </p>
+
+                {/* Focus Areas */}
+                <div className="mt-8 flex flex-wrap gap-3">
+
                     {[
-                        "React",
-                        "Node.js",
-                        "Typescript",
-                        "MongoDB",
-                        "JavaScript",
-                    ].map((tech) => (
+                        "Full Stack Development",
+                        "System Design",
+                        "Problem Solving",
+                        "Scalable Architecture",
+                    ].map((item) => (
                         <span
-                            key={tech}
+                            key={item}
                             className="
-      rounded-full
-      border
-      border-border
-      px-3
-      py-1
-      text-xs
-      text-muted-foreground
-      "
+                            rounded-full
+                            border
+                            border-border
+                            px-4
+                            py-2
+                            text-sm
+                            text-muted-foreground
+                            "
                         >
-                            {tech}
+                            {item}
                         </span>
                     ))}
+
                 </div>
 
-                <div className="mt-10 flex flex-wrap gap-4">
+                {/* CTA */}
+                <div className="mt-12 flex flex-wrap gap-4">
+
                     <Button asChild>
                         <a href="#projects">
                             View Projects
@@ -98,9 +134,12 @@ md:text-7xl
                             Resume
                         </a>
                     </Button>
+
                 </div>
 
-                <div className="mt-8 flex items-center gap-6">
+                {/* Links */}
+                <div className="mt-12 flex items-center gap-8">
+
                     <a
                         href="https://github.com/veerender-nemali"
                         target="_blank"
@@ -127,6 +166,41 @@ md:text-7xl
                     >
                         LeetCode
                     </a>
+
+                </div>
+
+                {/* Quick Stats */}
+                <div
+                    className="
+                    mt-16
+                    flex
+                    flex-wrap
+                    gap-10
+                    border-t
+                    border-border
+                    pt-8
+                    "
+                >
+                    <div>
+                        <p className="text-2xl font-semibold">500+</p>
+                        <p className="text-sm text-muted-foreground">
+                            DSA Problems
+                        </p>
+                    </div>
+
+                    <div>
+                        <p className="text-2xl font-semibold">3+</p>
+                        <p className="text-sm text-muted-foreground">
+                            Full Stack Projects
+                        </p>
+                    </div>
+
+                    <div>
+                        <p className="text-2xl font-semibold">1</p>
+                        <p className="text-sm text-muted-foreground">
+                            Industry Internship
+                        </p>
+                    </div>
                 </div>
 
             </div>

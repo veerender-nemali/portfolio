@@ -1,76 +1,155 @@
-import { Github, Linkedin, Mail } from "lucide-react";
-
 export default function Contact() {
     return (
-        <section className="min-h-screen flex items-center">
+        <section
+            id="contact"
+            className="min-h-screen flex items-center justify-center"
+        >
+            <div className="w-full text-center">
 
-            <div className="mx-auto max-w-3xl w-full px-5 sm:px-6 lg:px-8 text-center">
-
-                {/* Header */}
-                <h2 className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                <p className="text-sm uppercase tracking-[0.25em] text-muted-foreground">
                     Contact
-                </h2>
-
-                <h3 className="mt-6 text-3xl md:text-4xl font-semibold tracking-tight">
-                    Let’s build something together
-                </h3>
-
-                <p className="mt-4 text-muted-foreground leading-relaxed">
-                    I’m currently open to opportunities. If you like my work,
-                    feel free to reach out.
                 </p>
 
-                {/* Email CTA */}
-                <div className="mt-10">
-                    <a
-                        href="mailto:veerender@example.com"
+                <h2
+                    className="
+                    mt-6
+                    text-5xl
+                    md:text-7xl
+                    font-semibold
+                    tracking-[-0.06em]
+                    leading-[0.95]
+                    "
+                >
+                    Let's build
+                    <br />
+
+                    <span
                         className="
-            inline-flex items-center gap-2
-            rounded-xl
-            bg-foreground
-            text-background
-            px-6 py-3
-            text-sm
-            font-medium
-            hover:opacity-90
-            transition
-            "
+                        bg-gradient-to-r
+                        from-foreground
+                        via-foreground
+                        to-emerald-500
+                        bg-clip-text
+                        text-transparent
+                        "
                     >
-                        {/* <Mail size={16} /> */}
-                        Get in touch
+                        something meaningful.
+                    </span>
+                </h2>
+
+                <p
+                    className="
+                    mx-auto
+                    mt-8
+                    max-w-2xl
+                    text-lg
+                    leading-relaxed
+                    text-muted-foreground
+                    "
+                >
+                    I'm actively seeking Software Engineer opportunities and
+                    enjoy working on products that solve real problems.
+                    If you'd like to discuss a role, collaboration, or simply connect,
+                    I'd love to hear from you.
+                </p>
+
+                {/* CTA */}
+                <div className="mt-12">
+
+                    <a
+                        href="mailto:YOUR_EMAIL@gmail.com"
+                        className="
+                        inline-flex
+                        items-center
+                        rounded-2xl
+                        border
+                        border-emerald-500/20
+                        bg-emerald-500/10
+                        px-8
+                        py-4
+                        text-sm
+                        font-medium
+                        text-foreground
+                        transition-all
+                        duration-300
+                        hover:border-emerald-500/40
+                        hover:bg-emerald-500/15
+                        hover:shadow-[0_0_40px_rgba(16,185,129,0.15)]
+                        "
+                    >
+                        nemaliveerender73@gmail.com
                     </a>
+
                 </div>
 
-                {/* Social Links */}
-                <div className="mt-10 flex justify-center gap-8 text-muted-foreground">
+                {/* Socials */}
+                <div
+                    className="
+                    mt-16
+                    flex
+                    flex-wrap
+                    items-center
+                    justify-center
+                    gap-8
+                    "
+                >
 
                     <a
                         href="https://github.com/veerender-nemali"
                         target="_blank"
-                        className="flex items-center gap-2 hover:text-foreground transition-colors"
+                        rel="noreferrer"
+                        className="
+                        text-sm
+                        text-muted-foreground
+                        transition-colors
+                        hover:text-foreground
+                        "
                     >
-                        {/* <Github size={16} /> */}
                         GitHub
                     </a>
 
                     <a
                         href="https://www.linkedin.com/in/veerender-nemali/"
                         target="_blank"
-                        className="flex items-center gap-2 hover:text-foreground transition-colors"
+                        rel="noreferrer"
+                        className="
+                        text-sm
+                        text-muted-foreground
+                        transition-colors
+                        hover:text-foreground
+                        "
                     >
-                        {/* <Linkedin size={16} /> */}
                         LinkedIn
+                    </a>
+
+                    <a
+                        href="https://leetcode.com/u/veerender_nemali/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="
+                        text-sm
+                        text-muted-foreground
+                        transition-colors
+                        hover:text-foreground
+                        "
+                    >
+                        LeetCode
                     </a>
 
                 </div>
 
-                {/* Footer note */}
-                <p className="mt-16 text-xs text-muted-foreground">
-                    Built with Next.js + Tailwind CSS
-                </p>
+                {/* Footer */}
+                <div className="mt-24">
+
+                    <div className="mx-auto h-px max-w-md bg-border" />
+
+                    <p className="mt-8 text-sm text-muted-foreground">
+                        © 2026 Veerender Nemali
+                    </p>
+
+                </div>
 
             </div>
-
         </section>
     );
 }

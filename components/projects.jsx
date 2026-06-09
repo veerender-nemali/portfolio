@@ -2,27 +2,27 @@ import { Github, ExternalLink } from "lucide-react";
 
 const projects = [
     {
-        title: "DevConnect",
+        title: "DevTinder",
         description:
-            "Developer networking platform with authentication, real-time connections, and profile matching system.",
-        tech: ["Next.js", "Node.js", "MongoDB"],
-        github: "https://github.com/",
+            "A platform that connects developers with similar skills, interests, and passion. enabling them to chat, collaborate, and even meet in real life.",
+        tech: ["React.js", "Node.js", "MongoDB", "Express.js", "TailwindCss", "Redux-Toolkit", "React-Router"],
+        github: "https://github.com/veerender-nemali/DevTinder.git",
         live: "#",
     },
     {
-        title: "TaskFlow",
+        title: "LedgerFlow",
         description:
-            "Task management tool with drag-and-drop UI, authentication, and team collaboration features.",
-        tech: ["React", "Express", "MongoDB"],
-        github: "https://github.com/",
+            "Built a ledger based transaction processing backend using Node.js, Express.js, and MongoDB to simulate money transfers",
+        tech: ["Node.js", "Express", "MongoDB", "JWT", "NodeMailer"],
+        github: "https://github.com/veerender-nemali/Banking-Ledger-System.git",
         live: "#",
     },
     {
-        title: "CodeTrack",
+        title: "StreamiFy",
         description:
-            "LeetCode tracker dashboard with analytics, progress charts, and problem grouping.",
-        tech: ["Next.js", "Tailwind", "Chart.js"],
-        github: "https://github.com/",
+            "A video streaming platform which is similar to youtube UI, where you can stream youtube videos like, dislike, save, subscribe to your favourite channels, search your favourite videos and more.",
+        tech: ["React.js", "React-Router", "Redux-Toolkit", "Youtube APIs", "TailwindCss"],
+        github: "https://github.com/veerender-nemali/Youtube-UI-clone.git",
         live: "#",
     },
 ];
@@ -36,83 +36,123 @@ export default function Projects() {
                 {/* Header */}
                 <div className="mb-14">
                     <h2 className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
-                        Projects
+                        Selected Work
                     </h2>
 
-                    <p className="mt-4 text-muted-foreground max-w-xl">
-                        A selection of projects focused on full-stack development,
-                        performance, and clean UI design.
-                    </p>
+                    <h3 className="mt-4 text-3xl md:text-4xl font-semibold tracking-tight">
+                        Projects I've built
+                    </h3>
+                    {/* 
+                    <p className="mt-4 max-w-2xl text-muted-foreground">
+                        A collection of products focused on full-stack engineering,
+                        scalable architecture, and user-centric experiences.
+                    </p> */}
                 </div>
 
                 {/* Grid */}
                 <div className="grid md:grid-cols-2 gap-6">
 
-                    {projects.map((project) => (
-                        <div
+                    {projects.map((project, index) => (
+                        <article
                             key={project.title}
                             className="
-              group
-              rounded-xl
-              border border-border
-              bg-background
-              p-6
-              transition-all
-              hover:border-emerald-500/30
-              hover:shadow-[0_0_30px_rgba(16,185,129,0.08)]
-              "
+    group
+    relative
+    overflow-hidden
+    rounded-3xl
+    border
+    border-border
+    bg-background/40
+    backdrop-blur-sm
+    p-8
+    transition-all
+    duration-300
+    hover:border-emerald-500/30
+    hover:shadow-[0_0_50px_rgba(16,185,129,0.08)]
+    "
                         >
 
-                            {/* Title */}
-                            <h3 className="text-lg font-medium">
-                                {project.title}
-                            </h3>
+                            {/* Glow */}
+                            <div
+                                className="
+      absolute
+      inset-0
+      opacity-0
+      transition-opacity
+      duration-500
+      group-hover:opacity-100
+      bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.08),transparent_40%)]
+      "
+                            />
 
-                            {/* Description */}
-                            <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                                {project.description}
-                            </p>
+                            <div className="relative">
 
-                            {/* Tech stack */}
-                            <div className="mt-4 flex flex-wrap gap-2">
-                                {project.tech.map((t) => (
-                                    <span
-                                        key={t}
+                                <span className="text-xs tracking-[0.25em] text-emerald-500">
+                                    0{index + 1}
+                                </span>
+
+                                <h3 className="mt-4 text-2xl font-semibold tracking-tight">
+                                    {project.title}
+                                </h3>
+
+                                <p className="mt-4 max-w-2xl leading-relaxed text-muted-foreground">
+                                    {project.description}
+                                </p>
+
+                                <div className="mt-6 flex flex-wrap gap-2">
+                                    {project.tech.map((tech) => (
+                                        <span
+                                            key={tech}
+                                            className="
+            rounded-full
+            border
+            border-border
+            px-3
+            py-1
+            text-xs
+            text-muted-foreground
+            "
+                                        >
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+
+                                <div className="mt-8 flex items-center gap-6">
+
+                                    <a
+                                        href={project.github}
+                                        target="_blank"
+                                        rel="noreferrer"
                                         className="
-                    text-xs
-                    px-2 py-1
-                    rounded-full
-                    border border-emerald-500/20
-                    text-muted-foreground
-                    "
+          text-sm
+          text-muted-foreground
+          hover:text-foreground
+          transition-colors
+          "
                                     >
-                                        {t}
-                                    </span>
-                                ))}
+                                        View Code →
+                                    </a>
+
+                                    <a
+                                        href={project.live}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="
+          text-sm
+          text-muted-foreground
+          hover:text-foreground
+          transition-colors
+          "
+                                    >
+                                        Live Demo →
+                                    </a>
+
+                                </div>
+
                             </div>
 
-                            {/* Links */}
-                            <div className="mt-6 flex gap-4">
-                                <a
-                                    href={project.github}
-                                    target="_blank"
-                                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                                >
-                                    {/* <Github size={16} /> */}
-                                    Code
-                                </a>
-
-                                <a
-                                    href={project.live}
-                                    target="_blank"
-                                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                                >
-                                    {/* <ExternalLink size={16} /> */}
-                                    Live
-                                </a>
-                            </div>
-
-                        </div>
+                        </article>
                     ))}
 
                 </div>

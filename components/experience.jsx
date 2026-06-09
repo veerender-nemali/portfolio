@@ -1,79 +1,99 @@
 export default function Experience() {
     return (
-        <section className="min-h-screen flex items-center">
+        <section
+            id="experience"
+            className="min-h-screen flex items-center"
+        >
+            <div className="w-full">
 
-            <div className="mx-auto max-w-6xl w-full px-5 sm:px-6 lg:px-8">
-
-                {/* Header */}
-                <div className="mb-14">
+                <div className="mb-16">
                     <h2 className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
                         Experience
                     </h2>
 
-                    <p className="mt-4 text-muted-foreground max-w-xl">
-                        Internship experience and practical exposure building full-stack applications.
-                    </p>
+                    <h3 className="mt-4 text-3xl md:text-4xl font-semibold tracking-tight">
+                        Professional Journey
+                    </h3>
                 </div>
 
-                {/* Timeline */}
-                <div className="space-y-10">
+                <div className="relative">
 
-                    {/* Item 1 */}
-                    <div className="relative pl-6 border-l border-border">
+                    {/* Timeline Line */}
+                    <div className="absolute left-[11px] top-0 h-full w-px bg-border" />
 
-                        <div className="absolute left-[-5px] top-1.5 h-2.5 w-2.5 rounded-full bg-emerald-500" />
+                    {/* Experience Item */}
+                    <div className="relative pl-12">
 
-                        <h3 className="text-lg font-medium">
-                            Full Stack Developer Intern
-                        </h3>
+                        {/* Timeline Dot */}
+                        <div
+                            className="
+                            absolute
+                            left-0
+                            top-2
+                            h-6
+                            w-6
+                            rounded-full
+                            border
+                            border-emerald-500/50
+                            bg-emerald-500/10
+                            "
+                        />
 
-                        <p className="text-sm text-muted-foreground">
-                            Built scalable web applications using React, Node.js, and MongoDB.
-                        </p>
+                        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
 
-                        <div className="mt-3 flex flex-wrap gap-2">
-                            {["React", "Node.js", "MongoDB", "Express"].map((t) => (
-                                <span
-                                    key={t}
-                                    className="text-xs px-2 py-1 rounded-full border border-emerald-500/20 text-muted-foreground"
-                                >
-                                    {t}
-                                </span>
-                            ))}
+                            <div>
+
+                                <h4 className="text-xl font-semibold">
+                                    Full Stack Developer Intern
+                                </h4>
+
+                                <p className="mt-1 text-muted-foreground">
+                                    PatternLab.ai
+                                </p>
+
+                            </div>
+
+                            <span className="text-sm text-muted-foreground">
+                                Nov 2025 – Mar 2026
+                            </span>
+
                         </div>
 
-                    </div>
+                        <ul className="mt-8 space-y-4 text-muted-foreground">
 
-                    {/* Item 2 (Project-style experience) */}
-                    <div className="relative pl-6 border-l border-border">
+                            <li>
+                                Built responsive dashboards and data visualization
+                                interfaces for a manufacturing analytics platform,
+                                enabling real-time monitoring of machine performance.
+                            </li>
 
-                        <div className="absolute left-[-5px] top-1.5 h-2.5 w-2.5 rounded-full bg-emerald-500/70" />
+                            <li>
+                                Developed scalable REST APIs and backend services
+                                to process machine-generated production data.
+                            </li>
 
-                        <h3 className="text-lg font-medium">
-                            Personal Projects
-                        </h3>
+                            <li>
+                                Collaborated across frontend and backend systems,
+                                ensuring efficient data flow and application performance.
+                            </li>
 
-                        <p className="text-sm text-muted-foreground">
-                            Built multiple full-stack projects focusing on authentication, APIs, and UI systems.
-                        </p>
+                            <li>
+                                Implemented reusable React components and optimized
+                                state management for complex data-driven workflows.
+                            </li>
 
-                        <div className="mt-3 flex flex-wrap gap-2">
-                            {["Next.js", "JWT", "REST APIs", "Tailwind"].map((t) => (
-                                <span
-                                    key={t}
-                                    className="text-xs px-2 py-1 rounded-full border border-emerald-500/20 text-muted-foreground"
-                                >
-                                    {t}
-                                </span>
-                            ))}
-                        </div>
+                            <li>
+                                Worked with large datasets to deliver actionable
+                                production insights through charts, metrics, and reports.
+                            </li>
+
+                        </ul>
 
                     </div>
 
                 </div>
 
             </div>
-
         </section>
     );
 }
