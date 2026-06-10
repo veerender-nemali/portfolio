@@ -166,9 +166,7 @@ export default function About() {
 
                     <div>
                       <p className="text-2xl font-semibold">3+</p>
-                      <p className="text-muted-foreground text-sm">
-                        Full Stack Projects
-                      </p>
+                      <p className="text-muted-foreground text-sm">Projects</p>
                     </div>
 
                     <div>

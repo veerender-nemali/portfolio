@@ -3,9 +3,24 @@ import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 const projects = [
   {
+    title: "LedgerFlow",
+    description:
+      "Engineered a ledger-driven transaction platform that models real-world banking workflows. Implemented account management, secure fund transfers, transaction history, and audit trails while maintaining data integrity through double-entry ledger principles.",
+    tech: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "Ledger Architecture",
+      "REST APIs",
+    ],
+    github: "https://github.com/veerender-nemali/Banking-Ledger-System.git",
+    live: "#",
+  },
+  {
     title: "DevTinder",
     description:
-      "A platform that connects developers with similar skills, interests, and passion. enabling them to chat, collaborate, and even meet in real life.",
+      "Developed a networking platform that enables users to discover, connect, and chat with like-minded developers. Built authentication, profile management, connection requests, real-time interactions, and responsive user experiences across the application.",
     tech: [
       "React.js",
       "Node.js",
@@ -19,12 +34,12 @@ const projects = [
     live: "#",
   },
   {
-    title: "LedgerFlow",
+    title: "Personal Portfolio",
     description:
-      "Built a ledger based transaction processing backend using Node.js, Express.js, and MongoDB to simulate money transfers",
-    tech: ["Node.js", "Express", "MongoDB", "JWT", "NodeMailer"],
-    github: "https://github.com/veerender-nemali/Banking-Ledger-System.git",
-    live: "#",
+      "Designed and developed a responsive portfolio website to showcase projects, experience, and technical skills. Built with modern UI principles, smooth animations, dark mode support, and optimized performance.",
+    tech: ["Next.js", "React", "Tailwind CSS", "Framer Motion", "Vercel"],
+    github: "https://github.com/veerender-nemali/portfolio",
+    live: "https://veerendernemali.vercel.app/",
   },
   {
     title: "StreamiFy",
@@ -58,22 +73,22 @@ export default function Projects() {
         </div>
 
         {/* Grid */}
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid items-stretch gap-6 md:grid-cols-2">
           {projects.map((project, index) => (
             <Reveal key={project.title} delay={index * 0.1}>
               <article
                 key={project.title}
-                className="group border-border bg-background/40 relative rounded-3xl border p-5 backdrop-blur-sm transition-all duration-300 hover:border-emerald-500/30 hover:shadow-[0_0_50px_rgba(16,185,129,0.08)]"
+                className="group border-border bg-background/40 relative flex h-full flex-col overflow-hidden rounded-3xl border p-5 backdrop-blur-sm transition-all duration-300 hover:border-emerald-500/30 hover:shadow-[0_0_50px_rgba(16,185,129,0.08)]"
               >
                 {/* Glow */}
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.08),transparent_40%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-                <div className="relative">
+                <div className="relative flex h-full flex-col">
                   <h3 className="mt-2 text-2xl font-semibold tracking-tight">
                     {project.title}
                   </h3>
 
-                  <p className="text-muted-foreground mt-4 max-w-2xl leading-relaxed">
+                  <p className="text-muted-foreground mt-4 min-h-[110px] leading-relaxed">
                     {project.description}
                   </p>
 
@@ -88,19 +103,19 @@ export default function Projects() {
                     ))}
                   </div>
 
-                  <div className="mt-8 flex items-center gap-5">
+                  <div className="mt-auto flex items-center gap-5 pt-8">
                     {/* Live Demo (primary) */}
-                    {/* <a
+                    <a
                       href={project.live}
                       target="_blank"
                       rel="noreferrer"
                       className="group/link inline-flex items-center gap-2 text-sm font-medium text-emerald-400 transition-all duration-300 hover:text-emerald-300"
                     >
                       Live Demo
-                      <FiExternalLink className="h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
-                      underline effect
-                      <span className="absolute mt-5 h-[1px] w-0 bg-emerald-400 transition-all duration-300 group-hover/link:w-full" />
-                    </a> */}
+                      {/* <FiExternalLink className="h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" /> */}
+                      {/* underline effect */}
+                      {/* <span className="absolute mt-5 h-[1px] w-0 bg-emerald-400 transition-all duration-300 group-hover/link:w-full" /> */}
+                    </a>
 
                     {/* GitHub (secondary) */}
                     <a
