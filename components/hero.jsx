@@ -1,7 +1,8 @@
-import { Button } from "./ui/button";
-import Reveal from "./reveal";
+"use client";
+// import { Button } from "./ui/button";
+// import Reveal from "./reveal";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-
+import { motion } from "framer-motion";
 import { SiLeetcode } from "react-icons/si";
 import { FiArrowRight, FiFileText } from "react-icons/fi";
 
@@ -25,10 +26,17 @@ const socialLinks = [
 
 export default function Hero() {
   return (
-    <Reveal>
+    <motion.section
+      initial={{ opacity: 0, y: 3 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.8,
+        ease: "easeOut",
+      }}
+    >
       <section
         id="home"
-        className="relative flex min-h-screen items-center pt-24 md:pt-0"
+        className="relative flex min-h-screen items-center pt-20 md:pt-0"
       >
         <div className="max-w-5xl">
           {/* Status */}
@@ -102,6 +110,6 @@ export default function Hero() {
           </div>
         </div>
       </section>
-    </Reveal>
+    </motion.section>
   );
 }
