@@ -1,16 +1,43 @@
 import { Button } from "./ui/button";
+import Reveal from "./reveal";
+import {
+    FaGithub,
+    FaLinkedin,
+} from "react-icons/fa";
+
+import { SiLeetcode } from "react-icons/si";
+import { FiArrowRight, FiFileText } from "react-icons/fi";
+
+const socialLinks = [
+    {
+        name: "GitHub",
+        href: "https://github.com/veerender-nemali",
+        icon: FaGithub,
+    },
+    {
+        name: "LinkedIn",
+        href: "https://www.linkedin.com/in/veerender-nemali/",
+        icon: FaLinkedin,
+    },
+    {
+        name: "LeetCode",
+        href: "https://leetcode.com/u/veerender_nemali/",
+        icon: SiLeetcode,
+    },
+];
 
 export default function Hero() {
     return (
-        <section
-            id="home"
-            className="min-h-screen flex items-center"
-        >
-            <div className="max-w-5xl">
+        <Reveal>
+            <section
+                id="home"
+                className="relative min-h-screen flex items-center pt-24 md:pt-0"
+            >
+                <div className="max-w-5xl">
 
-                {/* Status */}
-                <div
-                    className="
+                    {/* Status */}
+                    <div
+                        className="
                     inline-flex
                     items-center
                     gap-2
@@ -23,18 +50,18 @@ export default function Hero() {
                     text-xs
                     text-muted-foreground
                     "
-                >
-                    <span className="relative flex h-2 w-2">
-                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
-                        <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
-                    </span>
+                    >
+                        <span className="relative flex h-2 w-2">
+                            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
+                            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+                        </span>
 
-                    Available for opportunities
-                </div>
+                        making things that should exist but don't yet. simple is hard, but worth it.
+                    </div>
 
-                {/* Name */}
-                <h1
-                    className="
+                    {/* Name */}
+                    <h1
+                        className="
                     mt-8
                     text-5xl
                     sm:text-6xl
@@ -44,11 +71,11 @@ export default function Hero() {
                     tracking-[-0.08em]
                     leading-[0.9]
                     "
-                >
-                    Veerender{" "}
+                    >
+                        Veerender{" "}
 
-                    <span
-                        className="
+                        <span
+                            className="
                         bg-gradient-to-r
                         from-foreground
                         via-foreground
@@ -56,26 +83,26 @@ export default function Hero() {
                         bg-clip-text
                         text-transparent
                         "
-                    >
-                        Nemali
-                    </span>
-                </h1>
+                        >
+                            Nemali
+                        </span>
+                    </h1>
 
-                {/* Role */}
-                <p
-                    className="
+                    {/* Role */}
+                    <p
+                        className="
                     mt-6
                     text-xl
                     md:text-2xl
                     text-muted-foreground
                     "
-                >
-                    Software Engineer
-                </p>
+                    >
+                        Software Engineer
+                    </p>
 
-                {/* Main Value */}
-                <p
-                    className="
+                    {/* Main Value */}
+                    <p
+                        className="
                     mt-8
                     max-w-3xl
                     text-lg
@@ -83,15 +110,15 @@ export default function Hero() {
                     leading-relaxed
                     text-muted-foreground
                     "
-                >
-                    I build scalable web applications and enjoy solving
-                    complex engineering problems. Experienced across
-                    frontend and backend development, with a strong focus on
-                    performance, clean architecture, and user experience.
-                </p>
+                    >
+                        I build scalable web applications and enjoy solving
+                        complex engineering problems. Experienced across
+                        frontend and backend development, with a strong focus on
+                        performance, clean architecture, and user experience.
+                    </p>
 
-                {/* Focus Areas */}
-                <div className="mt-8 flex flex-wrap gap-3">
+                    {/* Focus Areas */}
+                    {/* <div className="mt-8 flex flex-wrap gap-3">
 
                     {[
                         "Full Stack Development",
@@ -115,62 +142,143 @@ export default function Hero() {
                         </span>
                     ))}
 
-                </div>
+                </div> */}
 
-                {/* CTA */}
-                <div className="mt-12 flex flex-wrap gap-4">
+                    {/* CTA */}
+
+
+                    <div className="mt-12 flex flex-wrap gap-4">
+
+                        {/* Primary CTA */}
+                        <a
+                            href="#projects"
+                            className="
+      group
+      inline-flex
+      items-center
+      gap-2
+      rounded-full
+      bg-emerald-500/10
+      md:px-6 md:py-3
+      px-3 py-1.5
+      text-xs
+      md:text-md
+      text-foreground
+      backdrop-blur-sm
+      border border-emerald-500/20
+      transition-all duration-300
+      hover:bg-emerald-500/15
+      hover:border-emerald-500/30
+      hover:shadow-[0_0_30px_rgba(16,185,129,0.12)]
+    "
+                        >
+                            View Projects
+                            <FiArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                        </a>
+
+                        {/* Secondary CTA */}
+                        <a
+                            href="/resume/VeerenderNemaliSoftwareEngineer.pdf"
+                            target="_blank"
+                            className="
+      group
+      inline-flex
+      items-center
+      gap-2
+      rounded-full
+      md:px-6 md:py-3
+      px-3 py-1.5
+      text-xs
+      md:text-md
+      text-muted-foreground
+      border border-border/60
+      bg-background/30
+      backdrop-blur-sm
+      transition-all duration-300
+      hover:text-foreground
+      hover:border-border
+      hover:bg-background/50
+    "
+                        >
+                            <FiFileText className="w-4 h-4 transition-transform duration-300 group-hover:scale-110" />
+                            Resume
+                        </a>
+
+                    </div>
+                    {/* <div className="mt-12 flex flex-wrap gap-4">
 
                     <Button asChild>
                         <a href="#projects">
-                            View Projects
+                            Projects
                         </a>
                     </Button>
-
-                    <Button variant="outline" asChild>
+                    <Button asChild>
                         <a
-                            href="/resume/veerenderNemaliSoftwareEngineer.pdf"
+                            href="/resume/VeerenderNemaliSoftwareEngineer.pdf"
                             target="_blank"
+                            rel="noopener noreferrer"
                         >
                             Resume
                         </a>
                     </Button>
 
-                </div>
+                    <Button variant="outline" asChild>
+                        <a
+                            href="/resume/VeerenderNemaliSoftwareEngineer.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Resume
+                        </a>
+                    </Button>
 
-                {/* Links */}
-                <div className="mt-12 flex items-center gap-8">
+                </div> */}
 
-                    <a
-                        href="https://github.com/veerender-nemali"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                        GitHub
-                    </a>
+                    {/* Links */}
+                    <div className="mt-12 flex items-center gap-8">
 
-                    <a
-                        href="https://www.linkedin.com/in/veerender-nemali/"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                        LinkedIn
-                    </a>
+                        {socialLinks.map(skills => {
 
-                    <a
-                        href="https://leetcode.com/u/veerender_nemali/"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                        LeetCode
-                    </a>
+                            const Icon = skills.icon
 
-                </div>
+                            return (<a
+                                href={skills.href}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="
+  flex
+  h-11
+  w-11
+  items-center
+  justify-center
 
-                {/* Quick Stats */}
-                <div
+  rounded-full
+
+  border
+  border-border/60
+
+  bg-background/40
+  backdrop-blur-sm
+
+  text-muted-foreground
+
+  transition-all
+  duration-300
+
+  hover:text-emerald-400
+  hover:border-emerald-500/30
+  hover:bg-emerald-500/5
+
+  "
+                            >
+                                <Icon size={25} />
+                            </a>)
+                        })}
+
+                    </div>
+
+                    {/* Quick Stats */}
+                    {/* <div
                     className="
                     mt-16
                     flex
@@ -201,9 +309,10 @@ export default function Hero() {
                             Industry Internship
                         </p>
                     </div>
-                </div>
+                </div> */}
 
-            </div>
-        </section>
+                </div>
+            </section>
+        </Reveal>
     );
 }
