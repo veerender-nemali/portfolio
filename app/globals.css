@@ -1,7 +1,7 @@
 @import "@fontsource/inter";
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "shadcn/tailwind.css";
+/* @import "shadcn/tailwind.css"; */
 
 @custom-variant dark (&:is(.dark *));
 
@@ -148,7 +148,6 @@
 }
 
 @keyframes slow-ping {
-
   75%,
   100% {
     transform: scale(2);
@@ -158,12 +157,8 @@
 
 .hero-grid {
   background-image:
-    linear-gradient(to right,
-      hsl(var(--border) / 0.15) 1px,
-      transparent 1px),
-    linear-gradient(to bottom,
-      hsl(var(--border) / 0.15) 1px,
-      transparent 1px);
+    linear-gradient(to right, hsl(var(--border) / 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(var(--border) / 0.15) 1px, transparent 1px);
 
   background-size: 40px 40px;
 }
@@ -192,7 +187,6 @@ section {
 }
 
 @keyframes beat {
-
   0%,
   100% {
     transform: scale(1);
