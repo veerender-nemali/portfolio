@@ -230,8 +230,8 @@ section {
   animation: steam 0.8s ease-in-out infinite;
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   * {
     cursor: none !important;
   }
-}
+} */
