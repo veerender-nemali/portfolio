@@ -23,7 +23,7 @@ export default function Projects() {
             <Reveal key={project.title} delay={index * 0.1}>
               <article
                 key={project.title}
-                className="group border-border bg-background/40 relative flex h-full flex-col overflow-hidden rounded-3xl border p-5 backdrop-blur-sm transition-all duration-300 hover:border-emerald-500/30 hover:shadow-[0_0_50px_rgba(16,185,129,0.08)]"
+                className="group border-border bg-background/40 relative flex h-full flex-col overflow-hidden rounded-3xl border p-5 backdrop-blur-sm transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:border-emerald-500/30 hover:shadow-[0_0_50px_rgba(16,185,129,0.08)]"
               >
                 {/* Glow */}
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.08),transparent_40%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
@@ -41,7 +41,7 @@ export default function Projects() {
                     {project.tech.map((tech) => (
                       <span
                         key={tech}
-                        className="border-border text-muted-foreground rounded-full border px-3 py-1 text-xs"
+                        className="text-muted-foreground rounded-full border border-emerald-700 px-3 py-1 text-xs"
                       >
                         {tech}
                       </span>

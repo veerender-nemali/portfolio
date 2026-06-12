@@ -67,7 +67,7 @@ export default function Hero() {
               className="group md:text-md text-muted-foreground border-border/60 bg-background/30 hover:text-foreground hover:border-border hover:bg-background/50 inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-300 md:px-6 md:py-3"
             >
               <FiFileText className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />
-              Resume
+              Download Resume
             </a>
           </div>
 

@@ -229,3 +229,9 @@ section {
 .animate-steam:hover {
   animation: steam 0.8s ease-in-out infinite;
 }
+
+@media (min-width: 1024px) {
+  * {
+    cursor: none !important;
+  }
+}

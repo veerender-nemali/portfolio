@@ -4,6 +4,9 @@ import About from "@/components/about";
 import Projects from "@/components/projects";
 import Experience from "@/components/experience";
 import Contact from "@/components/contact";
+import ScrollProgress from "@/components/scroll-progress";
+import Learning from "@/components/learning";
+// import TerminalCard from "@/components/terminal-card";
 
 export default function Home() {
   return (
@@ -20,11 +23,15 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,rgba(16,185,129,0.08),transparent_40%)]" />
       </div>
 
+      <ScrollProgress />
+
       <Navbar />
 
       <main className="mx-auto max-w-6xl space-y-14 px-5 sm:px-6 md:space-y-0 lg:px-8">
         <Hero />
         <About />
+        <Learning />
+        {/* <TerminalCard /> */}
         <Projects />
         <Experience />
         <Contact />
