@@ -1,39 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaInstagram,
-  FaTwitter,
-  FaHeart,
-  FaCoffee,
-} from "react-icons/fa";
-import { SiLeetcode } from "react-icons/si";
-
-const socialLinks = [
-  {
-    name: "GitHub",
-    href: "https://github.com/veerender-nemali",
-    icon: FaGithub,
-  },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/veerender-nemali/",
-    icon: FaLinkedin,
-  },
-  {
-    name: "LeetCode",
-    href: "https://leetcode.com/u/veerender_nemali/",
-    icon: SiLeetcode,
-  },
-  {
-    name: "Instagram",
-    href: "https://instagram.com/_veerender.73",
-    icon: FaInstagram,
-  },
-  { name: "X", href: "https://x.com/veerendernemali", icon: FaTwitter },
-];
+import { FaHeart, FaCoffee } from "react-icons/fa";
+import { contactLinks } from "../lib/utils";
 
 const steamDots = [
   { x: 0, delay: 0 },
@@ -43,7 +12,7 @@ const steamDots = [
 
 function CoffeeSteam() {
   return (
-    <div className="relative inline-block h-6 w-6">
+    <div className="relative inline-block h-7 w-7">
       {steamDots.map((dot, i) => (
         <motion.span
           key={i}
@@ -114,7 +83,7 @@ export default function Contact() {
 
         {/* Socials */}
         <div className="mt-14 flex flex-wrap items-center justify-center gap-6">
-          {socialLinks.map((item) => {
+          {contactLinks.map((item) => {
             const Icon = item.icon;
             return (
               <a
@@ -133,7 +102,7 @@ export default function Contact() {
         {/* FOOTER AREA */}
         <div className="border-border/40 mt-16 w-full border-t pt-8">
           <div className="text-muted-foreground space-y-3 text-center text-sm">
-            <p className="flex items-center justify-center gap-2">
+            <div className="flex items-center justify-center gap-2">
               Built with
               <motion.span
                 variants={beatVariant}
@@ -150,9 +119,9 @@ export default function Contact() {
                   <CoffeeSteam />
                 </span>
               </span>
-            </p>
+            </div>
 
-            <p className="text-xs opacity-70">© 2026 Veerender Nemali</p>
+            {/* <p className="text-xs opacity-70">© 2026 Veerender Nemali</p> */}
           </div>
         </div>
       </div>

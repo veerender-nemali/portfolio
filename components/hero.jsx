@@ -1,28 +1,8 @@
 "use client";
-// import { Button } from "./ui/button";
-// import Reveal from "./reveal";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { motion } from "framer-motion";
-import { SiLeetcode } from "react-icons/si";
-import { FiArrowRight, FiFileText } from "react-icons/fi";
 
-const socialLinks = [
-  {
-    name: "GitHub",
-    href: "https://github.com/veerender-nemali",
-    icon: FaGithub,
-  },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/veerender-nemali/",
-    icon: FaLinkedin,
-  },
-  {
-    name: "LeetCode",
-    href: "https://leetcode.com/u/veerender_nemali/",
-    icon: SiLeetcode,
-  },
-];
+import { motion } from "framer-motion";
+import { FiArrowRight, FiFileText } from "react-icons/fi";
+import { heroSectionLinks } from "../lib/utils";
 
 export default function Hero() {
   return (
@@ -93,11 +73,12 @@ export default function Hero() {
 
           {/* Links */}
           <div className="mt-12 flex items-center gap-8">
-            {socialLinks.map((skills) => {
+            {heroSectionLinks.map((skills) => {
               const Icon = skills.icon;
 
               return (
                 <a
+                  key={skills.name}
                   href={skills.href}
                   target="_blank"
                   rel="noreferrer"

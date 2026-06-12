@@ -1,61 +1,6 @@
 import Reveal from "./reveal";
-import { FiExternalLink, FiGithub } from "react-icons/fi";
-
-const projects = [
-  {
-    title: "LedgerFlow",
-    description:
-      "Engineered a ledger-driven transaction platform that models real-world banking workflows. Implemented account management, secure fund transfers, transaction history, and audit trails while maintaining data integrity through double-entry ledger principles.",
-    tech: [
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "JWT",
-      "Ledger Architecture",
-      "REST APIs",
-    ],
-    github: "https://github.com/veerender-nemali/Banking-Ledger-System.git",
-    live: "#",
-  },
-  {
-    title: "DevTinder",
-    description:
-      "Developed a networking platform that enables users to discover, connect, and chat with like-minded developers. Built authentication, profile management, connection requests, real-time interactions, and responsive user experiences across the application.",
-    tech: [
-      "React.js",
-      "Node.js",
-      "MongoDB",
-      "Express.js",
-      "TailwindCss",
-      "Redux-Toolkit",
-      "React-Router",
-    ],
-    github: "https://github.com/veerender-nemali/DevTinder.git",
-    live: "#",
-  },
-  {
-    title: "Personal Portfolio",
-    description:
-      "Designed and developed a responsive portfolio website to showcase projects, experience, and technical skills. Built with modern UI principles, smooth animations, dark mode support, and optimized performance.",
-    tech: ["Next.js", "React", "Tailwind CSS", "Framer Motion", "Vercel"],
-    github: "https://github.com/veerender-nemali/portfolio",
-    live: "https://veerendernemali.vercel.app/",
-  },
-  {
-    title: "StreamiFy",
-    description:
-      "A video streaming platform which is similar to youtube UI, where you can stream youtube videos like, dislike, save, subscribe to your favourite channels, search your favourite videos and more.",
-    tech: [
-      "React.js",
-      "React-Router",
-      "Redux-Toolkit",
-      "Youtube APIs",
-      "TailwindCss",
-    ],
-    github: "https://github.com/veerender-nemali/Youtube-UI-clone.git",
-    live: "#",
-  },
-];
+import { FiGithub } from "react-icons/fi";
+import { projects } from "../lib/utils";
 
 export default function Projects() {
   return (
@@ -105,17 +50,17 @@ export default function Projects() {
 
                   <div className="mt-auto flex items-center gap-5 pt-8">
                     {/* Live Demo (primary) */}
-                    <a
+                    {/* <a
                       href={project.live}
                       target="_blank"
                       rel="noreferrer"
                       className="group/link inline-flex items-center gap-2 text-sm font-medium text-emerald-400 transition-all duration-300 hover:text-emerald-300"
                     >
                       Live Demo
-                      {/* <FiExternalLink className="h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" /> */}
-                      {/* underline effect */}
-                      {/* <span className="absolute mt-5 h-[1px] w-0 bg-emerald-400 transition-all duration-300 group-hover/link:w-full" /> */}
-                    </a>
+                      <FiExternalLink className="h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
+                      underline effect
+                      <span className="absolute mt-5 h-[1px] w-0 bg-emerald-400 transition-all duration-300 group-hover/link:w-full" />
+                    </a> */}
 
                     {/* GitHub (secondary) */}
                     <a
