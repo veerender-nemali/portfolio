@@ -100,7 +100,7 @@ export default function Contact() {
         </div>
 
         {/* FOOTER AREA */}
-        <div className="border-border/40 w-full border-t pt-8">
+        <div className="border-border/40 mt-5 w-full border-t pt-8">
           <div className="text-muted-foreground space-y-3 text-center text-sm">
             <div className="flex items-center justify-center gap-2">
               Built with
