@@ -121,7 +121,9 @@ export default function Contact() {
               </span>
             </div>
 
-            {/* <p className="text-xs opacity-70">© 2026 Veerender Nemali</p> */}
+            <p className="text-xs opacity-70">
+              Designed and Developed by Veerender Nemali
+            </p>
           </div>
         </div>
       </div>
