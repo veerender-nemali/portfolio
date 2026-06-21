@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center justify-center pt-20 md:pt-0"
+      className="relative flex min-h-screen items-center justify-center md:pt-0"
     >
       <div className="flex max-w-5xl flex-col items-center justify-center">
         {/* Status */}
