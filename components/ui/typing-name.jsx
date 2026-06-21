@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export default function HeroTyping() {
+export default function TypingName() {
   return (
     <div className="my-8 flex justify-center px-4">
       <div className="flex items-end">
@@ -18,7 +18,9 @@ export default function HeroTyping() {
         >
           <h1 className="text-right text-[18px] leading-[0.9] font-semibold tracking-[-0.06em] whitespace-nowrap sm:text-xl md:text-3xl lg:text-5xl xl:text-6xl">
             Hi, I'm Veerender Nemali, a{" "}
-            <span className="text-emerald-400">Software Engineer.</span>
+            <span className="from-foreground bg-gradient-to-r to-emerald-400 bg-clip-text text-transparent">
+              Software Engineer.
+            </span>
           </h1>
         </motion.div>
 

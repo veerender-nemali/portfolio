@@ -12,15 +12,21 @@ export default function Home() {
   return (
     <div className="relative overflow-x-hidden">
       {/* Ambient Background */}
-      <div className="pointer-events-none fixed inset-0 -z-10">
-        {/* Main Glow */}
-        <div className="absolute top-[-20%] right-[-45%] h-[500px] w-[500px] rounded-full bg-emerald-500/12 blur-[120px] sm:h-[700px] sm:w-[700px] sm:blur-[180px] lg:h-[1200px] lg:w-[1200px] lg:blur-[260px]" />
+      <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+        {/* Top Right Main Glow */}
+        <div className="absolute top-[-25%] right-[-35%] h-[500px] w-[500px] rounded-full bg-emerald-500/8 blur-[140px] sm:h-[800px] sm:w-[800px] sm:blur-[220px] lg:h-[1200px] lg:w-[1200px] lg:blur-[300px]" />
 
-        {/* Secondary Glow */}
-        <div className="absolute bottom-[-30%] left-[-40%] h-[400px] w-[400px] rounded-full bg-emerald-400/6 blur-[100px] sm:h-[600px] sm:w-[600px] sm:blur-[160px] lg:h-[1000px] lg:w-[1000px] lg:blur-[220px]" />
+        {/* Bottom Left Secondary Glow */}
+        {/* <div className="absolute bottom-[-30%] left-[-35%] h-[400px] w-[400px] rounded-full bg-emerald-400/5 blur-[120px] sm:h-[700px] sm:w-[700px] sm:blur-[180px] lg:h-[1000px] lg:w-[1000px] lg:blur-[260px]" /> */}
 
-        {/* Subtle radial overlay */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,rgba(16,185,129,0.08),transparent_40%)]" />
+        {/* Center Ambient Glow */}
+        <div className="absolute top-1/2 left-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-500/[0.03] blur-[200px]" />
+
+        {/* Radial Overlay */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,rgba(16,185,129,0.06),transparent_35%)]" />
+
+        {/* Subtle Grid Fade */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent,rgba(0,0,0,0.15))]" />
       </div>
 
       <ScrollProgress />

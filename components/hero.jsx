@@ -43,13 +43,13 @@ export default function Hero() {
             and user experience.
           </p> */}
 
-        <div className="mt-7 flex flex-wrap gap-4">
+        <div className="mt-4 flex flex-wrap gap-4">
           {/* Primary CTA */}
           <a
             href="#projects"
             className="group md:text-md text-foreground inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-300 hover:border-emerald-500/30 hover:bg-emerald-500/15 hover:shadow-[0_0_30px_rgba(16,185,129,0.12)] md:px-6 md:py-3"
           >
-            View Projects
+            Projects
             <FiArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </a>
 
@@ -60,12 +60,12 @@ export default function Hero() {
             className="group md:text-md text-muted-foreground border-border/60 bg-background/30 hover:text-foreground hover:border-border hover:bg-background/50 inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-300 md:px-6 md:py-3"
           >
             <FiFileText className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />
-            Download Resume
+            Resume
           </a>
         </div>
 
         {/* Links */}
-        <div className="mt-12 flex items-center gap-8">
+        {/* <div className="mt-12 flex items-center gap-8">
           {heroSectionLinks.map((skills) => {
             const Icon = skills.icon;
 
@@ -81,7 +81,7 @@ export default function Hero() {
               </a>
             );
           })}
-        </div>
+        </div> */}
       </div>
     </section>
   );
