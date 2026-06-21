@@ -1,5 +1,5 @@
 import Reveal from "./reveal";
-import { FiGithub } from "react-icons/fi";
+import { FiExternalLink, FiGithub } from "react-icons/fi";
 import { projects } from "../lib/utils";
 
 export default function Projects() {
@@ -50,7 +50,7 @@ export default function Projects() {
 
                   <div className="mt-auto flex items-center gap-5 pt-8">
                     {/* Live Demo (primary) */}
-                    {/* <a
+                    <a
                       href={project.live}
                       target="_blank"
                       rel="noreferrer"
@@ -58,9 +58,9 @@ export default function Projects() {
                     >
                       Live Demo
                       <FiExternalLink className="h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
-                      underline effect
-                      <span className="absolute mt-5 h-[1px] w-0 bg-emerald-400 transition-all duration-300 group-hover/link:w-full" />
-                    </a> */}
+                      {/* underline effect */}
+                      {/* <span className="absolute mt-5 h-[1px] w-0 bg-emerald-400 transition-all duration-300 group-hover/link:w-fit" /> */}
+                    </a>
 
                     {/* GitHub (secondary) */}
                     <a

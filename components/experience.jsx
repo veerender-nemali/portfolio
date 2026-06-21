@@ -57,10 +57,11 @@ export default function Experience() {
 
             <ul className="mt-10 space-y-4">
               {[
-                "Contributed to a manufacturing analytics platform for monitoring and visualizing machine production data.",
-                "Built reusable filters and UI components with Ant Design and Material UI across multiple interfaces.",
-                "Developed NestJS APIs, including analytics APIs from scratch, and worked with MongoDB for data storage and retrieval.",
-                "Integrated REST APIs with TanStack Query, managed state using Zustand, and developed dashboards and visualizations with Highcharts.",
+                "Developed features for a manufacturing analytics platform used to monitor and visualize machine production data.",
+                " Created a reusable dynamic filter component adopted across 30+ tables and reports, reducing duplicate frontend code by nearly 20%.",
+                " Built and maintained 25+ REST APIs using NestJS, TypeScript, and MongoDB to support analytics and reporting workflows, following an API-first approach and delivering features for client projects.",
+                "Developed 10+ interactive dashboards, tables, charts, and machine data visualizations using Highcharts, enabling real-time monitoring and analysis of production metrics.",
+                "Integrated backend services using TanStack Query and managed application state with Zustand, improving data synchronization and responsiveness across complex dashboard interfaces.",
               ].map((item) => (
                 <li
                   key={item}

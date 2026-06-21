@@ -30,7 +30,7 @@ export default function Home() {
       <main className="mx-auto max-w-6xl space-y-14 px-5 sm:px-6 md:space-y-0 lg:px-8">
         <Hero />
         <About />
-        <Learning />
+        {/* <Learning /> */}
         {/* <TerminalCard /> */}
         <Projects />
         <Experience />
