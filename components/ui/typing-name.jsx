@@ -16,7 +16,7 @@ export default function HeroTyping() {
           }}
           className="overflow-hidden pb-1 md:pb-2"
         >
-          <h1 className="text-right text-xl leading-[0.9] font-semibold tracking-[-0.06em] whitespace-nowrap md:text-3xl lg:text-5xl xl:text-6xl">
+          <h1 className="text-right text-[18px] leading-[0.9] font-semibold tracking-[-0.06em] whitespace-nowrap sm:text-xl md:text-3xl lg:text-5xl xl:text-6xl">
             Hi, I'm Veerender Nemali, a{" "}
             <span className="text-emerald-400">Software Engineer.</span>
           </h1>
