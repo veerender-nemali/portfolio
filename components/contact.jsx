@@ -44,12 +44,16 @@ export default function Contact() {
   };
 
   return (
-    <motion.section
+    // <motion.section
+    //   id="contact"
+    //   initial={{ opacity: 0, y: 40 }}
+    //   whileInView={{ opacity: 1, y: 0 }}
+    //   viewport={{ once: true }}
+    //   transition={{ duration: 0.8 }}
+    //   className="flex min-h-screen items-center justify-center px-6"
+    // >
+    <div
       id="contact"
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
       className="flex min-h-screen items-center justify-center px-6"
     >
       <div className="flex w-full max-w-4xl flex-col items-center text-center">
@@ -58,7 +62,7 @@ export default function Contact() {
           Contact
         </p>
 
-        <h2 className="mt-6 text-5xl leading-[0.95] font-semibold tracking-[-0.06em] md:text-7xl">
+        <h2 className="mt-6 text-4xl leading-[0.95] font-semibold tracking-[-0.06em] md:text-6xl">
           Let's build
           <br />
           <span className="from-foreground via-foreground bg-linear-to-r to-emerald-500 bg-clip-text text-transparent">
@@ -75,9 +79,14 @@ export default function Contact() {
         <div className="mt-10">
           <a
             href="mailto:nemaliveerender73@gmail.com"
-            className="inline-flex items-center rounded-2xl border border-emerald-500/20 bg-emerald-500/10 px-8 py-4 text-sm font-medium transition-all duration-300 hover:border-emerald-500/40 hover:bg-emerald-500/15 hover:shadow-[0_0_40px_rgba(16,185,129,0.15)]"
+            className="group bg-background/50 relative inline-flex h-14 items-center justify-center overflow-hidden rounded-full border border-emerald-500/20 px-8 shadow-[0_8px_32px_rgba(16,185,129,0.08)] backdrop-blur-3xl transition-all duration-300 hover:scale-[1.02] hover:border-emerald-500/30 hover:bg-emerald-500/10 hover:shadow-[0_8px_40px_rgba(16,185,129,0.15)]"
           >
-            nemaliveerender73@gmail.com
+            {/* Glass highlight */}
+            <span className="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-b from-white/20 via-transparent to-transparent dark:from-white/10" />
+
+            <span className="relative text-sm font-medium text-emerald-600 dark:text-emerald-400">
+              nemaliveerender73@gmail.com
+            </span>
           </a>
         </div>
 
@@ -127,6 +136,7 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </motion.section>
+    </div>
+    // </motion.section>
   );
 }

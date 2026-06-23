@@ -8,8 +8,8 @@ export default function ThemeToggle() {
 
   return (
     <button
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="text-muted-foreground flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:border-emerald-500/20 hover:bg-emerald-500/5 hover:text-emerald-400 active:scale-95"
+      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      className="bg-background/30 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-white/10 backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:bg-white/[0.05]"
     >
       {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
     </button>

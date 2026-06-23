@@ -12,7 +12,7 @@ export default function Projects() {
             Selected Work
           </h2>
 
-          <h3 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">
+          <h3 className="mt-4 text-2xl font-semibold tracking-tight md:text-3xl">
             Projects I've built
           </h3>
         </div>
@@ -29,7 +29,7 @@ export default function Projects() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.08),transparent_40%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                 <div className="relative flex h-full flex-col">
-                  <h3 className="mt-2 text-2xl font-semibold tracking-tight">
+                  <h3 className="mt-2 text-xl font-semibold tracking-tight">
                     {project.title}
                   </h3>
 

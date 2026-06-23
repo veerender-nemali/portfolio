@@ -235,3 +235,13 @@ section {
     cursor: none !important;
   }
 } */
+
+@keyframes shine {
+  from {
+    transform: translateX(-200px) rotate(12deg);
+  }
+
+  to {
+    transform: translateX(1200px) rotate(12deg);
+  }
+}

@@ -16,7 +16,7 @@ export default function TypingName() {
           }}
           className="overflow-hidden pb-1 md:pb-2"
         >
-          <h1 className="text-right text-[18px] leading-[0.9] font-semibold tracking-[-0.06em] whitespace-nowrap sm:text-xl md:text-3xl lg:text-5xl xl:text-6xl">
+          <h1 className="text-right text-[18px] leading-[0.9] font-semibold tracking-[-0.06em] whitespace-nowrap sm:text-xl md:text-3xl lg:text-5xl">
             Hi, I'm Veerender Nemali, a{" "}
             <span className="from-foreground bg-gradient-to-r to-emerald-400 bg-clip-text text-transparent">
               Software Engineer.

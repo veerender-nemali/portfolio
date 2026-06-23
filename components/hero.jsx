@@ -45,22 +45,44 @@ export default function Hero() {
 
         <div className="mt-4 flex flex-wrap gap-4">
           {/* Primary CTA */}
-          <a
+          {/* <a
             href="#projects"
             className="group md:text-md text-foreground inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-300 hover:border-emerald-500/30 hover:bg-emerald-500/15 hover:shadow-[0_0_30px_rgba(16,185,129,0.12)] md:px-6 md:py-3"
           >
             Projects
             <FiArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+          </a> */}
+          <a
+            href="#projects"
+            className="group relative inline-flex h-8 items-center justify-center overflow-hidden rounded-full border border-white/[0.12] bg-white/[0.05] px-4 shadow-[0_8px_30px_rgba(0,0,0,0.15)] backdrop-blur-[30px] transition-all duration-300 hover:scale-[1.03] hover:bg-white/[0.08] md:h-10 md:px-5 dark:bg-white/[0.03]"
+          >
+            {/* Top Highlight */}
+            <span className="absolute inset-0 rounded-full bg-gradient-to-b from-white/[0.15] via-white/[0.03] to-transparent" />
+
+            <span className="relative text-xs font-medium md:text-sm">
+              View Projects
+            </span>
           </a>
 
           {/* Secondary CTA */}
-          <a
+          {/* <a
             href="/resume/VeerenderNemaliSoftwareEngineer.pdf"
             target="_blank"
             className="group md:text-md text-muted-foreground border-border/60 bg-background/30 hover:text-foreground hover:border-border hover:bg-background/50 inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-300 md:px-6 md:py-3"
           >
             <FiFileText className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />
             Resume
+          </a> */}
+          <a
+            href="/resume/VeerenderNemaliSoftwareEngineer.pdf"
+            target="_blank"
+            className="group relative inline-flex h-8 items-center justify-center overflow-hidden rounded-full border border-emerald-400/20 bg-emerald-500/[0.08] px-4 shadow-[0_8px_30px_rgba(16,185,129,0.12)] backdrop-blur-[30px] transition-all duration-300 hover:scale-[1.03] hover:bg-emerald-500/[0.12] md:h-10 md:px-5"
+          >
+            <span className="absolute inset-0 rounded-full bg-gradient-to-b from-white/[0.15] via-transparent to-transparent" />
+
+            <span className="relative text-xs font-medium text-emerald-400 md:text-sm">
+              Resume
+            </span>
           </a>
         </div>
 
