@@ -85,7 +85,7 @@ export default function About() {
               <div className="border-border mt-10 border-t pt-8">
                 <div className="space-y-4">
                   <div>
-                    <p className="text-2xl font-semibold">130+</p>
+                    <p className="text-2xl font-semibold">140+</p>
                     <p className="text-muted-foreground text-sm">
                       DSA Problems Solved
                     </p>
